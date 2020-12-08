@@ -16,6 +16,7 @@
                                 <li>
                                 <a href="{{route('branch.index')}}"> All Branches </a><span class="bread-slash"> / </span>
                                 </li>
+                                
                                 <li>
                                     <span class="bread-blod"> add branch </span>
                                 </li>
