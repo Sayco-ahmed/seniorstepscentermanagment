@@ -24,4 +24,5 @@ Route::get('/', function () {
 
 Route::namespace('Pages')->group(function () {
     Route::resource('/branch', 'BranchController');
+    Route::resource('/cities', 'CityController');
 });

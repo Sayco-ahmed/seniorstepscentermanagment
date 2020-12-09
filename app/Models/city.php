@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class city extends Model
 {
-    //
+    protected $table = 'cities';
+    protected $primaryKey = 'id';
+    
+    protected $fillable = [
+        'cityName',
+        'countryId',
+    ];
+
 }

@@ -47,8 +47,7 @@ class BranchController extends Controller
             [
                 'branchCode'     => 'required',
                 'branchName'     => 'required',
-                'branchAddress'  => 'required',
-                
+                'branchAddress'  => 'required',  
                 'branchImg'      => 'image'
             ]
         );

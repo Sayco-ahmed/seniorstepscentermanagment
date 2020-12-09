@@ -10,7 +10,7 @@ class branch extends Model
     //main settings
     protected $table = 'branches';
     protected $primaryKey = 'id';
-    public $timestamps=false ;
+   
     protected $fillable = [
         'branchCode',
         'branchName',

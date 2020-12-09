@@ -45,7 +45,7 @@
                         <div class="row text-center">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="address-hr">
-                                    <p><b>ID</b><br /> {{$requested_branch->branchCode}} </p>
+                                    <p><b>Code</b><br /> {{$requested_branch->branchCode}} </p>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
