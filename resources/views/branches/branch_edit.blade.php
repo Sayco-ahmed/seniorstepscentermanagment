@@ -76,9 +76,9 @@
                             <div class="date-picker-inner" style="text-align:left">
                                 
                                 <div class="form-group data-custon-pick" style="text-align:left">
-                                    <label>Branch Id</label>
+                                    <label>Branch Code</label>
                                     <div class="input-mark-inner mg-b-22">
-                                        <input type="number" name="branchCode" class="form-control" placeholder="Branch Id" value="{{$requested_branch->branchCode}}">
+                                        <input type="number" name="branchCode" class="form-control" placeholder="Branch Code" value="{{$requested_branch->branchCode}}">
                                     </div>
                                 </div>
                                 <div class="form-group data-custon-pick" style="text-align:left">
