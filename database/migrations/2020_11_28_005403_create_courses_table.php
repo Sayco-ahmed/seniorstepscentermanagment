@@ -9,7 +9,7 @@ class CreateCoursesTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void 
      */
     public function up()
     {
@@ -22,9 +22,9 @@ class CreateCoursesTable extends Migration
             $table->integer('courseHours')->nullable();
             $table->float('courseFees', 10,2 )->nullable();
             $table->text('coursePdf')->nullable();
-            $table->text('courseImg')->nullable();
+            $table->string('courseImg')->default('default_course.png');
             $table->text('courseNotes')->nullable();
-            $table->integer('active')->nullable();
+            $table->string('active')->nullable();
 
 
 

@@ -230,8 +230,8 @@
 															class="angle-down-topmenu"><i
 																class="fa fa-angle-down"></i></span>Setup</a>
 													<div role="menu" class="dropdown-menu animated zoomIn">
-													<a href="{{route('branch.index')}}" class="dropdown-item">Branch</a>
-														<a href="Cities.html" class="dropdown-item">Cities</a>
+														<a href="{{route('branch.index')}}" class="dropdown-item">Branch</a>
+														<a href="{{route('cities.index')}}" class="dropdown-item">Cities</a>
 														<a href="labs.html" class="dropdown-item">Labs</a>
 														<a href="nationalities.html" class="dropdown-item">Nationalities</a>
 														<a href="Reach_Source.html" class="dropdown-item">Reach Source</a>
@@ -345,7 +345,7 @@
 													class="admin-project-icon edu-icon edu-down-arrow"></span></a>
 											<ul id="demolibra" class="collapse dropdown-header-top">
 												<li><a href="{{route('branch.index')}}" class="dropdown-item">Branch</a></li>
-												<li><a href="Cities.html" class="dropdown-item">Cities</a></li>
+												<li><a href="{{route('cities.index')}}" class="dropdown-item">Cities</a></li>
 												<li><a href="labs.html" class="dropdown-item">Labs</a></li>
 												<li><a href="nationalities.html" class="dropdown-item">Nationalities</a></li>
 												<li><a href="Reach_Source.html" class="dropdown-item">Reach Source</a></li>

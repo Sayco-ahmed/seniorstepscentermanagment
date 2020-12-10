@@ -9,72 +9,72 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
 <!-- Bootstrap CSS
     ============================================ -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 <!-- Bootstrap CSS
     ============================================ -->
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
 <!-- owl.carousel CSS
     ============================================ -->
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/owl.theme.css">
-<link rel="stylesheet" href="css/owl.transitions.css">
+<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+<link rel="stylesheet" href="{{asset('css/owl.theme.css')}}">
+<link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
 <!-- animate CSS
     ============================================ -->
-<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="{{asset('css/animate.css')}}">
 <!-- normalize CSS
     ============================================ -->
-<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="{{asset('css/normalize.css')}}">
 <!-- meanmenu icon CSS
     ============================================ -->
-<link rel="stylesheet" href="css/meanmenu.min.css">
+<link rel="stylesheet" href="{{asset('css/meanmenu.min.css')}}">
 <!-- main CSS
     ============================================ -->
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="{{asset('css/main.css')}}">
 <!-- educate icon CSS
     ============================================ -->
-<link rel="stylesheet" href="css/educate-custon-icon.css">
+<link rel="stylesheet" href="{{asset('css/educate-custon-icon.css')}}">
 <!-- morrisjs CSS
     ============================================ -->
-<link rel="stylesheet" href="css/morrisjs/morris.css">
+<link rel="stylesheet" href="{{asset('css/morrisjs/morris.css')}}">
 <!-- mCustomScrollbar CSS
     ============================================ -->
-<link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="{{asset('css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
 <!-- metisMenu CSS
     ============================================ -->
-<link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
-<link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+<link rel="stylesheet" href="{{asset('css/metisMenu/metisMenu.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/metisMenu/metisMenu-vertical.css')}}">
 <!-- calendar CSS
     ============================================ -->
-<link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
-<link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+<link rel="stylesheet" href="{{asset('css/calendar/fullcalendar.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/calendar/fullcalendar.print.min.css')}}">
 <!-- x-editor CSS
     ============================================ -->
-<link rel="stylesheet" href="css/editor/select2.css">
-<link rel="stylesheet" href="css/editor/datetimepicker.css">
-<link rel="stylesheet" href="css/editor/bootstrap-editable.css">
-<link rel="stylesheet" href="css/editor/x-editor-style.css">
+<link rel="stylesheet" href="{{asset('css/editor/select2.css')}}">
+<link rel="stylesheet" href="{{asset('css/editor/datetimepicker.css')}}">
+<link rel="stylesheet" href="{{asset('css/editor/bootstrap-editable.css')}}">
+<link rel="stylesheet" href="{{asset('css/editor/x-editor-style.css')}}">
 <!-- normalize CSS
     ============================================ -->
-<link rel="stylesheet" href="css/data-table/bootstrap-table.css">
-<link rel="stylesheet" href="css/data-table/bootstrap-editable.css">
+<link rel="stylesheet" href="{{asset('css/data-table/bootstrap-table.css')}}">
+<link rel="stylesheet" href="{{asset('css/data-table/bootstrap-editable.css')}}">
 <!-- select2 CSS
     ============================================ -->
-<link rel="stylesheet" href="css/select2/select2.min.css">
+<link rel="stylesheet" href="{{asset('css/select2/select2.min.css')}}">
 <!-- chosen CSS
     ============================================ -->
-<link rel="stylesheet" href="css/chosen/bootstrap-chosen.css">
+<link rel="stylesheet" href="{{asset('css/chosen/bootstrap-chosen.css')}}">
 <!-- modals CSS
     ============================================ -->
-<link rel="stylesheet" href="css/modals.css">
+<link rel="stylesheet" href="{{asset('css/modals.css')}}">
 <!-- style CSS
     ============================================ -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{{asset('style.css')}}">
 <!-- responsive CSS
     ============================================ -->
-<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 <!-- modernizr JS
     ============================================ -->
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="{{asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>
 <style>
     .pagination-info {
         display: none !important;
@@ -145,9 +145,6 @@
 <div class="data-table-area mg-b-15">
     <div class="container">
        
-            <!-- <a href="index.html" class="btn btn-primary waves-effect waves-light mg-b-15"> Back </a> -->
-        <!--<button class="btn btn-primary waves-effect waves-light mg-b-15" data-toggle="modal" data-target="#add">إلغــــاء</button>-->
-        <!--<button class="btn btn-primary waves-effect waves-light mg-b-15" data-toggle="modal" data-target="#add">حـفـــــظ</button>-->
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="sparkline13-list">
@@ -174,30 +171,27 @@
 
                                       
 
-                                        {{-- <div class="form-group">
-                                          <label for="city-id" class="control-label">City ID:</label>
-                                          <input type="text" class="form-control" id="city-id" name="">
-                                        </div> --}}
-                                        <div class="form-group">
-                                            <label for="city-name" class="control-label">City name:</label>
-                                        <input type="text" class="form-control" id="city-name" name="cityName" value="{{old('cityName')}}">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="country-name" class="control-label">Country Name:</label>
-                                            <div class="input-mark-inner mg-b-22">
-                                                    <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
+                                      
+                                            <div class="form-group">
+                                                <label for="city-name" class="control-label">City name:</label>
+                                            <input type="text" class="form-control" id="city-name" name="cityName" value="{{old('cityName')}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="country-name" class="control-label">Country Name:</label>
+                                                <div class="input-mark-inner mg-b-22">
+                                                        <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
 
-                                                        <option value=""    {{ old('countryId') == '' ? 'selected' : ''}}>Select</option>
-                                                        <option value="112" {{ old('countryId') == '' ? 'selected' : ''}}>United States</option>
-                                                        <option value="113" {{ old('countryId') == '' ? 'selected' : ''}}>United Kingdom</option>
-                                                        <option value="114" {{ old('countryId') == '' ? 'selected' : ''}}>Afghanistan</option>
-                                                        <option value="115" {{ old('countryId') == '' ? 'selected' : ''}}>Aland Islands</option>
-                                                        <option value="116" {{ old('countryId') == '' ? 'selected' : ''}}>Albania</option>
-                                                        <option value="117" {{ old('countryId') == '' ? 'selected' : ''}}>Algeria</option>
-                                                        
-                                                    </select>
+                                                            <option value=""    {{ old('countryId') == '' ? 'selected' : ''}}>Select</option>
+                                                            <option value="112" {{ old('countryId') == '' ? 'selected' : ''}}>United States</option>
+                                                            <option value="113" {{ old('countryId') == '' ? 'selected' : ''}}>United Kingdom</option>
+                                                            <option value="114" {{ old('countryId') == '' ? 'selected' : ''}}>Afghanistan</option>
+                                                            <option value="115" {{ old('countryId') == '' ? 'selected' : ''}}>Aland Islands</option>
+                                                            <option value="116" {{ old('countryId') == '' ? 'selected' : ''}}>Albania</option>
+                                                            <option value="117" {{ old('countryId') == '' ? 'selected' : ''}}>Algeria</option>
+                                                            
+                                                        </select>
                                                 </div>
-                                          </div>
+                                            </div>
                                         
                                        
                                      
@@ -266,42 +260,42 @@
                                             </div>
         
                                             <form action="{{route('cities.update' , $city->id )}}" method="post" enctype="multipart/form-data">
-                                                {{ csrf_field() }}
-                                                {{ method_field('put') }}
-                                            <div class="modal-body">
-                                              
-        
-                                                {{-- <div class="form-group">
-                                                  <label for="city-id" class="control-label">City ID:</label>
-                                                  <input type="text" class="form-control" id="city-id">
-                                                </div> --}}
-                                                <div class="form-group">
-                                                  
-                                                    <label for="city-name" class="control-label">City name:</label>
-                                                    <input type="text" class="form-control" id="city-name" name="cityName" value="{{ $city->cityName }}">
-                                                  </div>
-                                                  <div class="form-group">
-                                                    <label for="country-name" class="control-label">Country Name:</label>
-                                                    <div class="input-mark-inner mg-b-22">
-                                                        <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
-                                                            <option value="" >Select</option>
-                                                            <option value="112" @if($city->countryId == "112") selected @endif>United States</option>
-                                                            <option value="113" @if($city->countryId == "113") selected @endif>United Kingdom</option>
-                                                            <option value="114" @if($city->countryId == "114") selected @endif>Afghanistan</option>
-                                                            <option value="115" @if($city->countryId == "115") selected @endif>Aland Islands</option>
-                                                            <option value="116" @if($city->countryId == "116") selected @endif>Albania</option>
-                                                            <option value="117" @if($city->countryId == "117") selected @endif>Algeria</option>                                                    --}}
-                                                        </select>
-                                                    </div>
-                                                  </div>
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('put') }}
+                                                <div class="modal-body">
                                                 
-                                               
-                                              
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                              <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Edit</button>
-                                            </div>
+            
+                                                    {{-- <div class="form-group">
+                                                    <label for="city-id" class="control-label">City ID:</label>
+                                                    <input type="text" class="form-control" id="city-id">
+                                                    </div> --}}
+                                                    <div class="form-group">
+                                                    
+                                                        <label for="city-name" class="control-label">City name:</label>
+                                                        <input type="text" class="form-control" id="city-name" name="cityName" value="{{ $city->cityName }}">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="country-name" class="control-label">Country Name:</label>
+                                                        <div class="input-mark-inner mg-b-22">
+                                                            <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
+                                                                <option value="" >Select</option>
+                                                                <option value="112" @if($city->countryId == "112") selected @endif>United States</option>
+                                                                <option value="113" @if($city->countryId == "113") selected @endif>United Kingdom</option>
+                                                                <option value="114" @if($city->countryId == "114") selected @endif>Afghanistan</option>
+                                                                <option value="115" @if($city->countryId == "115") selected @endif>Aland Islands</option>
+                                                                <option value="116" @if($city->countryId == "116") selected @endif>Albania</option>
+                                                                <option value="117" @if($city->countryId == "117") selected @endif>Algeria</option>                                                    --}}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                
+                                                
+                                                </div>
+                                                <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Edit</button>
+                                                </div>
                                             </form>
         
                                           </div>
@@ -382,79 +376,68 @@
 @endsection
 
 @section('this_page_scripts')
-        <!-- jquery
-		============================================ -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <!-- bootstrap JS
-            ============================================ -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- wow JS
-            ============================================ -->
-        <script src="js/wow.min.js"></script>
-        <!-- price-slider JS
-            ============================================ -->
-        <script src="js/jquery-price-slider.js"></script>
+
         <!-- meanmenu JS
             ============================================ -->
-        <script src="js/jquery.meanmenu.js"></script>
+        <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
         <!-- owl.carousel JS
             ============================================ -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="{{asset('js/owl.carousel.min.js')}}"></script>
         <!-- sticky JS
             ============================================ -->
-        <script src="js/jquery.sticky.js"></script>
+        <script src="{{asset('js/jquery.sticky.js')}}"></script>
         <!-- scrollUp JS
             ============================================ -->
-        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="{{asset('js/jquery.scrollUp.min.js')}}"></script>
         <!-- mCustomScrollbar JS
             ============================================ -->
-        <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+        <script src="{{asset('js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+        <script src="{{asset('js/scrollbar/mCustomScrollbar-active.js')}}"></script>
         <!-- metisMenu JS
             ============================================ -->
-        <script src="js/metisMenu/metisMenu.min.js"></script>
-        <script src="js/metisMenu/metisMenu-active.js"></script>
+        <script src="{{asset('js/metisMenu/metisMenu.min.js')}}"></script>
+        <script src="{{asset('js/metisMenu/metisMenu-active.js')}}"></script>
         <!-- data table JS
             ============================================ -->
-        <script src="js/data-table/bootstrap-table.js"></script>
-        <script src="js/data-table/tableExport.js"></script>
-        <script src="js/data-table/data-table-active.js"></script>
-        <script src="js/data-table/bootstrap-table-editable.js"></script>
-        <script src="js/data-table/bootstrap-editable.js"></script>
-        <script src="js/data-table/bootstrap-table-resizable.js"></script>
-        <script src="js/data-table/colResizable-1.5.source.js"></script>
-        <script src="js/data-table/bootstrap-table-export.js"></script>
+        <script src="{{asset('js/data-table/bootstrap-table.js')}}"></script>
+        <script src="{{asset('js/data-table/tableExport.js')}}"></script>
+        <script src="{{asset('js/data-table/data-table-active.js')}}"></script>
+        <script src="{{asset('js/data-table/bootstrap-table-editable.js')}}"></script>
+        <script src="{{asset('js/data-table/bootstrap-editable.js')}}"></script>
+        <script src="{{asset('js/data-table/bootstrap-table-resizable.js')}}"></script>
+        <script src="{{asset('js/data-table/colResizable-1.5.source.js')}}"></script>
+        <script src="{{asset('js/data-table/bootstrap-table-export.js')}}"></script>
         <!--  editable JS
             ============================================ -->
-        <script src="js/editable/jquery.mockjax.js"></script>
-        <script src="js/editable/mock-active.js"></script>
-        <script src="js/editable/select2.js"></script>
-        <script src="js/editable/moment.min.js"></script>
-        <script src="js/editable/bootstrap-datetimepicker.js"></script>
-        <script src="js/editable/bootstrap-editable.js"></script>
-        <script src="js/editable/xediable-active.js"></script>
+        <script src="{{asset('js/editable/jquery.mockjax.js')}}"></script>
+        <script src="{{asset('js/editable/mock-active.js')}}"></script>
+        <script src="{{asset('js/editable/select2.js')}}"></script>
+        <script src="{{asset('js/editable/moment.min.js')}}"></script>
+        <script src="{{asset('js/editable/bootstrap-datetimepicker.js')}}"></script>
+        <script src="{{asset('js/editable/bootstrap-editable.js')}}"></script>
+        <script src="{{asset('js/editable/xediable-active.js')}}"></script>
         <!-- Chart JS
             ============================================ -->
-        <script src="js/chart/jquery.peity.min.js"></script>
-        <script src="js/peity/peity-active.js"></script>
+        <script src="{{asset('js/chart/jquery.peity.min.js')}}"></script>
+        <script src="{{asset('js/peity/peity-active.js')}}"></script>
         <!-- chosen JS
             ============================================ -->
-        <script src="js/chosen/chosen.jquery.js"></script>
-        <script src="js/chosen/chosen-active.js"></script>
+        <script src="{{asset('js/chosen/chosen.jquery.js')}}"></script>
+        <script src="{{asset('js/chosen/chosen-active.js')}}"></script>
         <!-- select2 JS
             ============================================ -->
-        <script src="js/select2/select2.full.min.js"></script>
-        <script src="js/select2/select2-active.js"></script>
+        <script src="{{asset('js/select2/select2.full.min.js')}}"></script>
+        <script src="{{asset('js/select2/select2-active.js')}}"></script>
         <!-- tab JS
             ============================================ -->
-        <script src="js/tab.js"></script>
+        <script src="{{asset('js/tab.js')}}"></script>
         <!-- plugins JS
             ============================================ -->
-        <script src="js/plugins.js"></script>
+        <script src="{{asset('js/plugins.js')}}"></script>
         <!-- main JS
             ============================================ -->
-        <script src="js/main.js"></script>
+        <script src="{{asset('js/main.js')}}"></script>
         <!-- tawk chat JS
             ============================================ -->
-        <script src="js/tawk-chat.js"></script>
+        <script src="{{asset('js/tawk-chat.js')}}"></script>
 @endsection
