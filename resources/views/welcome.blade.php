@@ -151,6 +151,8 @@
 
                 <div class="links">
                 <a href="{{route('branch.index')}}">Branches</a>
+                <a href="{{route('cities.index')}}">cities</a>
+                <a href="{{route('courses.index')}}">courses</a>
                     
                 </div>
             </div>
