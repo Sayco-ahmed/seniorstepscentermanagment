@@ -26,4 +26,5 @@ Route::namespace('Pages')->group(function () {
     Route::resource('/branch', 'BranchController');
     Route::resource('/cities', 'CityController');
     Route::resource('/courses', 'CourseController');
+    Route::resource('/faculty', 'FacultyController');
 });

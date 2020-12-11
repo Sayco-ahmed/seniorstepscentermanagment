@@ -249,7 +249,7 @@
 																class="fa fa-angle-down"></i></span> Training  </a>
 													<div role="menu" class="dropdown-menu animated zoomIn">
 														
-														<a href="Courses.html" class="dropdown-item">Courses</a>
+														<a href="{{route('courses.index')}}" class="dropdown-item">Courses</a>
 														<a href="Trainers.html" class="dropdown-item">Trainers</a>
 														<a href="Rounds.html" class="dropdown-item">Rounds</a>
 													
@@ -321,14 +321,13 @@
 											</ul>
 										</li>
 										<li>
-											<a data-toggle="collapse" data-target="#demopro" href="#">Finance <span
+											<a data-toggle="collapse" data-target="#demopro" href="#">Training <span
 													class="admin-project-icon edu-icon edu-down-arrow"></span></a>
 											<ul id="demopro" class="collapse dropdown-header-top">
-												<li><a href="#" class="dropdown-item">Finance</a></li>
-												<li><a href="#" class="dropdown-item">Finance</a></li>
-												<li><a href="#" class="dropdown-item">Finance</a></li>
-												<li><a href="#" class="dropdown-item">Finance</a></li>
-												<li><a href="#" class="dropdown-item">Finance</a></li>
+												<li><a href="{{route('courses.index')}}" class="dropdown-item">Courses</a></li>
+												<li><a href="#" class="dropdown-item">Trainers</a></li>
+												<li><a href="#" class="dropdown-item">Rounds</a></li>
+												
 											</ul>
 										</li>
 										<li>

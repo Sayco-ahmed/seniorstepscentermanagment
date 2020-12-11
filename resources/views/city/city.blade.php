@@ -167,7 +167,7 @@
                                     <form action="{{url('cities')}}" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         {{ method_field('POST') }}
-                                    <div class="modal-body">
+                                    <div class="modal-body"> 
 
                                       
 

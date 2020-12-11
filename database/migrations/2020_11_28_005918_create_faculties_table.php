@@ -16,7 +16,8 @@ class CreateFacultiesTable extends Migration
         Schema::create('faculties', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('facultyName', 250)->nullable();
-            $table->integer('universityId')->nullable();
+            $table->integer('universityId')->nullable(); 
+            //تم تغيير نوع الداتا للجامعات حتي الانتهاء من التيست
 
             $table->timestamps();
         });
