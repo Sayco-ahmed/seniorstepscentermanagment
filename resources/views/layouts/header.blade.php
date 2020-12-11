@@ -235,7 +235,7 @@
 														<a href="labs.html" class="dropdown-item">Labs</a>
 														<a href="nationalities.html" class="dropdown-item">Nationalities</a>
 														<a href="Reach_Source.html" class="dropdown-item">Reach Source</a>
-														<a href="Faculty.html" class="dropdown-item">Faculty </a>
+														<a href="{{route('faculty.index')}}" class="dropdown-item">Faculty </a>
 														
 														<a href="Student_Status.html" class="dropdown-item">Student status </a>
 
@@ -348,7 +348,7 @@
 												<li><a href="labs.html" class="dropdown-item">Labs</a></li>
 												<li><a href="nationalities.html" class="dropdown-item">Nationalities</a></li>
 												<li><a href="Reach_Source.html" class="dropdown-item">Reach Source</a></li>
-												<li><a href="Faculty.html" class="dropdown-item">Faculty</a></li>
+											<li><a href="{{route('faculty.index')}}" class="dropdown-item">Faculty</a></li>
 												<li><a href="Student_Status.html" class="dropdown-item">Student status</a></li>
 
 
