@@ -31,5 +31,7 @@ class branch extends Model
         return asset('uploads/branch/' . $this->branchImg);
     }
 
-
+    public function Lab(){
+        return $this->hasMany(lab::class , 'branchId' , 'id');
+    }
 }

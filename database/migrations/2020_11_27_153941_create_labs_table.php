@@ -19,11 +19,11 @@ class CreateLabsTable extends Migration
             $table->string('pcsNumber', 250)->nullable();
             $table->string('chairsNumber', 250)->nullable();
             $table->string('additiveChairs', 250)->nullable();
-            $table->text('labImg')->nullable();
+            $table->string('labImg')->default('default_lab.png');
             $table->text('notes')->nullable();
             $table->BigInteger('branchId')->unsigned()->nullable();
  
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 
