@@ -16,7 +16,6 @@ class CreateReachSourcesTable extends Migration
         Schema::create('reach_sources', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('reachSourceText')->nullable();
-
             $table->timestamps();
         });
     }

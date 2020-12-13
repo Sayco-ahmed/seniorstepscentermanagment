@@ -13,5 +13,5 @@ class city extends Model
         'cityName',
         'countryId',
     ];
-
+ 
 }

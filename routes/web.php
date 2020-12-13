@@ -28,4 +28,6 @@ Route::namespace('Pages')->group(function () {
     Route::resource('/courses', 'CourseController');
     Route::resource('/faculty', 'FacultyController');
     Route::resource('/lab', 'LabController');
+    Route::resource('/nationality', 'NationalityController');
+    Route::resource('/reach_source', 'ReachsourceController');
 });
