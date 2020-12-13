@@ -35,4 +35,8 @@ class lab extends Model
      public function Branch (){
         return $this->belongsTo(branch::class , 'branchId');
      }
+
+     public function round(){
+        return $this->hasMany(round::class , 'labId' , 'id');
+    }
 }

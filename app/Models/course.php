@@ -35,4 +35,8 @@ class course extends Model
         return asset('uploads/courses/' . $this->courseImg);
     }
 
+    public function round(){
+        return $this->hasMany(round::class , 'courseId' , 'id');
+    }
+
 }

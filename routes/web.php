@@ -30,4 +30,5 @@ Route::namespace('Pages')->group(function () {
     Route::resource('/lab', 'LabController');
     Route::resource('/nationality', 'NationalityController');
     Route::resource('/reach_source', 'ReachsourceController');
+    Route::resource('/round', 'RoundController');
 });
