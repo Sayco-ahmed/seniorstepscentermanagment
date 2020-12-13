@@ -232,9 +232,9 @@
 													<div role="menu" class="dropdown-menu animated zoomIn">
 														<a href="{{route('branch.index')}}" class="dropdown-item">Branch</a>
 														<a href="{{route('cities.index')}}" class="dropdown-item">Cities</a>
-														<a href="labs.html" class="dropdown-item">Labs</a>
-														<a href="nationalities.html" class="dropdown-item">Nationalities</a>
-														<a href="Reach_Source.html" class="dropdown-item">Reach Source</a>
+														<a href="{{route('lab.index')}}" class="dropdown-item">Labs</a>
+														<a href="{{route('nationality.index')}}" class="dropdown-item">Nationalities</a>
+														<a href="{{route('reach_source.index')}}" class="dropdown-item">Reach Source</a>
 														<a href="{{route('faculty.index')}}" class="dropdown-item">Faculty </a>
 														
 														<a href="Student_Status.html" class="dropdown-item">Student status </a>
@@ -251,7 +251,7 @@
 														
 														<a href="{{route('courses.index')}}" class="dropdown-item">Courses</a>
 														<a href="Trainers.html" class="dropdown-item">Trainers</a>
-														<a href="Rounds.html" class="dropdown-item">Rounds</a>
+														<a href="{{route('round.index')}}" class="dropdown-item">Rounds</a>
 													
 													</div>
 												</li>
@@ -326,7 +326,7 @@
 											<ul id="demopro" class="collapse dropdown-header-top">
 												<li><a href="{{route('courses.index')}}" class="dropdown-item">Courses</a></li>
 												<li><a href="#" class="dropdown-item">Trainers</a></li>
-												<li><a href="#" class="dropdown-item">Rounds</a></li>
+												<li><a href="{{route('round.index')}}" class="dropdown-item">Rounds</a></li>
 												
 											</ul>
 										</li>
@@ -345,9 +345,9 @@
 											<ul id="demolibra" class="collapse dropdown-header-top">
 												<li><a href="{{route('branch.index')}}" class="dropdown-item">Branch</a></li>
 												<li><a href="{{route('cities.index')}}" class="dropdown-item">Cities</a></li>
-												<li><a href="labs.html" class="dropdown-item">Labs</a></li>
-												<li><a href="nationalities.html" class="dropdown-item">Nationalities</a></li>
-												<li><a href="Reach_Source.html" class="dropdown-item">Reach Source</a></li>
+												<li><a href="{{route('lab.index')}}" class="dropdown-item">Labs</a></li>
+												<li><a href="{{route('nationality.index')}}" class="dropdown-item">Nationalities</a></li>
+												<li><a href="{{route('reach_source.index')}}" class="dropdown-item">Reach Source</a></li>
 											<li><a href="{{route('faculty.index')}}" class="dropdown-item">Faculty</a></li>
 												<li><a href="Student_Status.html" class="dropdown-item">Student status</a></li>
 

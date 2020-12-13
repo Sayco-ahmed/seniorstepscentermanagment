@@ -154,6 +154,10 @@
                 <a href="{{route('cities.index')}}">cities</a>
                 <a href="{{route('courses.index')}}">courses</a>
                 <a href="{{route('faculty.index')}}">Faculty</a>
+                <a href="{{route('reach_source.index')}}">reach source</a>
+                <a href="{{route('nationality.index')}}">nationality</a>
+                <a href="{{route('lab.index')}}">labs</a>
+                <a href="{{route('round.index')}}">rounds</a>
                     
                 </div>
             </div>
