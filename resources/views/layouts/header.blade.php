@@ -237,7 +237,7 @@
 														<a href="{{route('reach_source.index')}}" class="dropdown-item">Reach Source</a>
 														<a href="{{route('faculty.index')}}" class="dropdown-item">Faculty </a>
 														
-														<a href="Student_Status.html" class="dropdown-item">Student status </a>
+														<a href="{{route('student_status.index')}}" class="dropdown-item">Student status </a>
 
 
 													</div>
@@ -250,7 +250,7 @@
 													<div role="menu" class="dropdown-menu animated zoomIn">
 														
 														<a href="{{route('courses.index')}}" class="dropdown-item">Courses</a>
-														<a href="Trainers.html" class="dropdown-item">Trainers</a>
+														<a href="{{route('trainer.index')}}" class="dropdown-item">Trainers</a>
 														<a href="{{route('round.index')}}" class="dropdown-item">Rounds</a>
 													
 													</div>
@@ -325,7 +325,7 @@
 													class="admin-project-icon edu-icon edu-down-arrow"></span></a>
 											<ul id="demopro" class="collapse dropdown-header-top">
 												<li><a href="{{route('courses.index')}}" class="dropdown-item">Courses</a></li>
-												<li><a href="#" class="dropdown-item">Trainers</a></li>
+												<li><a href="{{route('trainer.index')}}" class="dropdown-item">Trainers</a></li>
 												<li><a href="{{route('round.index')}}" class="dropdown-item">Rounds</a></li>
 												
 											</ul>
@@ -349,7 +349,7 @@
 												<li><a href="{{route('nationality.index')}}" class="dropdown-item">Nationalities</a></li>
 												<li><a href="{{route('reach_source.index')}}" class="dropdown-item">Reach Source</a></li>
 											<li><a href="{{route('faculty.index')}}" class="dropdown-item">Faculty</a></li>
-												<li><a href="Student_Status.html" class="dropdown-item">Student status</a></li>
+												<li><a href="{{route('student_status.index')}}" class="dropdown-item">Student status</a></li>
 
 
 							

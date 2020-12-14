@@ -158,6 +158,8 @@
                 <a href="{{route('nationality.index')}}">nationality</a>
                 <a href="{{route('lab.index')}}">labs</a>
                 <a href="{{route('round.index')}}">rounds</a>
+                <a href="{{route('student_status.index')}}">student status</a>
+                <a href="{{route('trainer.index')}}">Trainer</a>
                     
                 </div>
             </div>

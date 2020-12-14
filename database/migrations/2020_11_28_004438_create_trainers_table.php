@@ -28,7 +28,7 @@ class CreateTrainersTable extends Migration
             $table->text('trainerLinkedinUrl')->nullable();
             $table->string('trainerJob', 250)->nullable();
             $table->string('trainerCompany', 250)->nullable();
-            $table->text('trainerImg')->nullable();
+            $table->string('trainerImg')->default('default_trainer.png');
             $table->text('trainerNotes')->nullable();
             $table->integer('active')->nullable();
 

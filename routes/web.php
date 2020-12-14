@@ -31,4 +31,6 @@ Route::namespace('Pages')->group(function () {
     Route::resource('/nationality', 'NationalityController');
     Route::resource('/reach_source', 'ReachsourceController');
     Route::resource('/round', 'RoundController');
+    Route::resource('/student_status', 'StudentstatusController');
+    Route::resource('/trainer', 'TrainerController');
 });

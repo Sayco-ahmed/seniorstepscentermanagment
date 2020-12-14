@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
-use App\Models\nationality;
+use App\Models\student_status;
 use Illuminate\Http\Request;
 
-class NationalityController extends Controller
+class StudentstatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class NationalityController extends Controller
      */
     public function index()
     {
-        $nationality = nationality::all();
+        $student_status = student_status::all();
 
-        return view('nationality.nationality' , compact('nationality'));
+        return view('student_status.student_status' , compact('student_status'));
     }
 
     /**
@@ -42,26 +42,26 @@ class NationalityController extends Controller
         (
             [
 
-                'nationalityName'     => 'required'
+                'statusName'     => 'required'
                 
                 
             ]
         );
 
-        nationality::create($request->all());
+        student_status::create($request->all());
 
-        session()->flash('success',('nationality added successfully'));
+        session()->flash('success',('student_status added successfully'));
 
-        return redirect('/nationality'); 
+        return redirect('/student_status');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\nationality  $nationality
+     * @param  \App\Models\student_status  $student_status
      * @return \Illuminate\Http\Response
      */
-    public function show(nationality $nationality)
+    public function show(student_status $student_status)
     {
         //
     }
@@ -69,10 +69,10 @@ class NationalityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\nationality  $nationality
+     * @param  \App\Models\student_status  $student_status
      * @return \Illuminate\Http\Response
      */
-    public function edit(nationality $nationality)
+    public function edit(student_status $student_status)
     {
         //
     }
@@ -81,42 +81,42 @@ class NationalityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\nationality  $nationality
+     * @param  \App\Models\student_status  $student_status
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, nationality $nationality)
+    public function update(Request $request, student_status $student_status)
     {
         $request->validate
         (
             [
 
 
-                'nationalityName'     => 'required'
+                'statusName'     => 'required'
                 
             ]
         );
 
-        $nationality->fill($request->all())->save();
+        $student_status->fill($request->all())->save();
 
-        session()->flash('success',('nationality Edited successfully'));
+        session()->flash('success',('student_status Edited successfully'));
 
 
-        return redirect()->route('nationality.index');
+        return redirect()->route('student_status.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\nationality  $nationality
+     * @param  \App\Models\student_status  $student_status
      * @return \Illuminate\Http\Response
      */
-    public function destroy(nationality $nationality)
+    public function destroy(student_status $student_status)
     {
-        $nationality->delete();
+        $student_status->delete();
 
-        session()->flash('success',('nationality Deleted successfully'));
+        session()->flash('success',('student_status Deleted successfully'));
 
 
-        return redirect('/nationality');
+        return redirect('/student_status');
     }
 }
