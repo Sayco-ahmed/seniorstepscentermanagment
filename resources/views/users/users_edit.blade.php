@@ -1,10 +1,15 @@
 
 @extends('layouts.master')
 
-@section('title' , 'Add Users')
+@section('title' , 'Edit Users')
 
 @section('this_page_links')
-
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<!-- Google Fonts
+    ============================================ -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+<!-- Bootstrap CSS
+    ============================================ -->
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 <!-- Bootstrap CSS
     ============================================ -->
@@ -59,6 +64,50 @@
 <script src="{{asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
 
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<!-- Google Fonts
+    ============================================ -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+<!-- Bootstrap CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+<!-- Bootstrap CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+<!-- owl.carousel CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
+<link rel="stylesheet" href="{{asset('css/owl.theme.css')}}">
+<link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
+<!-- animate CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/animate.css')}}">
+<!-- normalize CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/normalize.css')}}">
+<!-- meanmenu icon CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/meanmenu.min.css')}}">
+<!-- main CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/main.css')}}">
+<!-- educate icon CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/educate-custon-icon.css')}}">
+<!-- morrisjs CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/morrisjs/morris.css')}}">
+<!-- mCustomScrollbar CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
+<!-- metisMenu CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/metisMenu/metisMenu.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/metisMenu/metisMenu-vertical.css')}}">
+<!-- calendar CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/calendar/fullcalendar.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/calendar/fullcalendar.print.min.css')}}">
     <!-- select2 CSS
     ============================================ -->
 <link rel="stylesheet" href="{{asset('css/select2/select2.min.css')}}">
@@ -69,8 +118,21 @@
 <!-- duallistbox CSS
     ============================================ -->
 <link rel="stylesheet" href="{{asset('css/duallistbox/bootstrap-duallistbox.min.css')}}">
-
-
+<!-- selection filter -->
+<link href="{{asset('css/select.min.css')}}" rel="stylesheet">
+<!-- -------------------------------------------- -->
+<!-- modals CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/modals.css')}}">
+<!-- style CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('style.css')}}">
+<!-- responsive CSS
+    ============================================ -->
+<link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+<!-- modernizr JS
+    ============================================ -->
+<script src="{{asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>
 
 <style>
 
@@ -254,34 +316,33 @@
 @endsection
 
 @section('breadcome-area')
-    <div class="breadcome-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="breadcome-list">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
-                                <div class="breadcome-heading pull-right">
-                                    <form role="search" class="sr-input-func">
-                                        <input type="text" placeholder="...search " class="search-int form-control"
-                                            style="text-align:left" name="branch_search">
-                                        <a href="#"><i class="fa fa-search"></i></a>
-                                    </form>
-                                </div>
+<div class="breadcome-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcome-list">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
+                            <div class="breadcome-heading pull-right">
+                                <form role="search" class="sr-input-func">
+                                    <input type="text" placeholder="...search " class="search-int form-control"
+                                        style="text-align:left" name="branch_search">
+                                    <a href="#"><i class="fa fa-search"></i></a>
+                                </form>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
-                                <ul class="breadcome-menu pull-left" style="direction: ltr;">
-                                    <li>
-                                    <a href="{{url('/')}}"> Home </a><span class="bread-slash"> / </span>
-                                    </li>
-                                    <li>
-                                    <a href="{{route('user.index')}}"> User </a><span class="bread-slash"> / </span>
-                                    </li>
-                                    <li>
-                                        <span class="bread-blod"> Users add </span>
-                                    </li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
+                            <ul class="breadcome-menu pull-left" style="direction: ltr;">
+                                <li>
+                                <a href="{{url('/')}}"> Home </a><span class="bread-slash"> / </span>
+                                </li>
+                                <li>
+                                <a href="{{route('user.index')}}"> User </a><span class="bread-slash"> / </span>
+                                </li>
+                                <li>
+                                    <span class="bread-blod"> Users Edit </span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -292,25 +353,26 @@
 
 @section('maincontent')
 
+
 <div class="single-pro-review-area mt-t-30 mg-b-15">
     <div class="container">
         @include('errors.errors')
-        <form action="{{url('user')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('user.update' , $requested_user->id)}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            {{ method_field('POST') }}
+            {{ method_field('PUT') }}
 
             <div class="row res-ltr">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                     <div class="sparkline16-list responsive-mg-b-30">
                         <div class="profile-img mg-b-23">
-                            <img src="{{asset('uploads/users/default_user.png')}}" alt="" class="image-preview" />
+                            <img src="{{$requested_user->image_path}}" alt="" class="image-preview" />
 
                         </div>
                         <div class="file-upload-inner ts-forms mg-b-15">
                             <div class="input prepend-big-btn">
 
                                 <div class="file-button" style="background-color: transparent;">
-                                    <input type="file" name="userImg"  value="{{old('userImg')}}" class="image" >
+                                    <input type="file" name="userImg"  value="{{$requested_user->userImg}}" class="image" >
 
                                 </div>
                                 <!-- <input type="text" id="prepend-big-btn" placeholder="" autofocus type="button" > -->
@@ -345,13 +407,13 @@
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <label>User Name</label>
                                     <div class="input-mark-inner mg-b-22">
-                                        <input type="text" name="userName" value="{{old('userName')}}" class="form-control"
+                                        <input type="text" name="userName" value="{{$requested_user->userName}}" class="form-control"
                                             placeholder="User name">
                                     </div>
                                 </div>
                                 <div class="form-group data-custon-pick" style="text-align:left" id="passconta" style="position: relative">
                                     <label>Password</label>
-                                    <input type="password" name="userPassword" value="{{old('userPassword')}}" id="password"
+                                    <input type="password" name="userPassword" value="{{$requested_user->userPassword}}" id="password"
                                         placeholder="Enter the password" class="form-control"><i class="glyphicon glyphicon-eye-open" id="togglePassword"></i>
 
 
@@ -372,7 +434,7 @@
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <label>User Full Name</label>
                                     <div class="input-mark-inner mg-b-22">
-                                        <input type="text" name="userFullName" value="{{old('userFullName')}}" class="form-control"
+                                        <input type="text" name="userFullName" value="{{$requested_user->userFullName}}" class="form-control"
                                             placeholder="Full Name">
                                     </div>
                                 </div>
@@ -387,7 +449,7 @@
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <label>User Mobile</label>
                                     <div class="input-mark-inner mg-b-22">
-                                        <input type="number" name="userMobile" value="{{old('userMobile')}}" class="form-control"
+                                        <input type="number" name="userMobile" value="{{$requested_user->userMobile}}" class="form-control"
                                             placeholder="User Mobile">
                                     </div>
                                 </div>
@@ -424,10 +486,10 @@
                                                 
                                             </div>
                                             <select id="demo" name="branchId" >
-                                            <option value=""  {{ '' == old('branchId') ? 'selected' : ''}} >Choose Branch</option>
+                                            <option value=""  {{ '' == $requested_user->branchId ? 'selected' : ''}} >Choose Branch</option>
 
                                             @foreach ($allbranches as $branch)
-                                            <option value="{{$branch->id}}" {{$branch->id == old('branchId') ? 'selected' : ''}}> {{$branch->branchName}} </option> 
+                                            <option value="{{$branch->id}}" {{$branch->id == $requested_user->branchId ? 'selected' : ''}}> {{$branch->branchName}} </option> 
                                             @endforeach
                                                
                                             
@@ -449,10 +511,10 @@
                                             
                                         </div>
                                         <select id="demo2" name="roleId" >
-                                            <option value=""  {{ '' == old('roleId') ? 'selected' : ''}} >Choose role</option>
+                                            <option value=""  {{ '' == $requested_user->roleId ? 'selected' : ''}} >Choose role</option>
                                             
                                             @foreach ($allroles as $role)
-                                            <option value="{{$role->id}}" {{$role->id == old('roleId') ? 'selected' : ''}}> {{$role->roleName}} </option> 
+                                            <option value="{{$role->id}}" {{$role->id == $requested_user->roleId ? 'selected' : ''}}> {{$role->roleName}} </option> 
                                             @endforeach
 
                                             
@@ -553,7 +615,14 @@
 		var mySelect = new Select('#demo');
 		var mySelect = new Select('#demo2');
 	</script>
-        
+        <!-- duallistbox JS
+           ============================================ -->
+           <script src="{{asset('js/duallistbox/jquery.bootstrap-duallistbox.js')}}"></script>
+           <script src="{{asset('js/duallistbox/duallistbox.active.js')}}"></script>
+           <script src="{{asset('js/bundle.min.js')}}"></script>
+       
+           <script src="{{asset('js/select2/select2-active.js')}}"></script>
+           <script src="{{asset('js/select2/select2.full.min.js')}}"></script>
            <script>
 
                 $(".image").change(function () {

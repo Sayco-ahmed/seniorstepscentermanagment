@@ -15,23 +15,30 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            // $table->string('name');
+            // $table->string('email')->unique();
+            // $table->timestamp('email_verified_at')->nullable();
+            // $table->string('password');
 
            
-            $table->string('image',255)->nullable();
+            // $table->string('image',255)->nullable();
            
             
-            $table->string('code')->nullable();
-            $table->string('ar_full_name', 255)->nullable();
-            $table->string('en_full_name', 255)->nullable();
-            $table->string('mobile', 255)->nullable();
-            $table->string('job', 255)->nullable();
-            $table->dateTime('lock_date', 6)->nullable();
+            // $table->string('code')->nullable();
+            // $table->string('ar_full_name', 255)->nullable();
+            // $table->string('en_full_name', 255)->nullable();
+            $table->string('userMobile', 255)->nullable();
+            $table->string('userName', 255)->nullable();
+            $table->string('userPassword', 255)->nullable();
+            $table->string('userFullName', 255)->nullable();
+            $table->string('userImg')->default('default_user.png');
+            $table->BigInteger('branchId')->unsigned()->nullable();
+            $table->BigInteger('roleId')->unsigned()->nullable();
+
+            // $table->string('job', 255)->nullable();
+            // $table->dateTime('lock_date', 6)->nullable();
           
-            $table->tinyInteger('active')->nullable();
+            // $table->tinyInteger('active')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

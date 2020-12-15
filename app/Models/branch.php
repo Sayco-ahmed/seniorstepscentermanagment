@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class branch extends Model
@@ -33,5 +34,9 @@ class branch extends Model
 
     public function Lab(){
         return $this->hasMany(lab::class , 'branchId' , 'id');
+    }
+
+    public function user(){
+        return $this->hasMany(User::class , 'branchId' , 'id');
     }
 }

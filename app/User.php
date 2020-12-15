@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Models\branch;
+use App\Models\role;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -16,16 +18,24 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+          'userMobile',
+          'userName',
+          'userPassword',
+          'userFullName',
+          'userImg',
+          'branchId',
+          'roleId',
+          
     ];
-
+    protected $table = 'users';
+    protected $primaryKey = 'id';
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'userPassword', 'remember_token',
     ];
 
     /**
@@ -36,4 +46,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $appends = ['image_path'] ;
+
+    public function getImagePathAttribute(){
+
+
+        return asset('uploads/users/' . $this->userImg);
+    }
+    
+    public function branch (){
+        return $this->belongsTo(branch::class , 'branchId');
+     }
+
+     public function role (){
+        return $this->belongsTo(role::class , 'roleId');
+     }
+
 }

@@ -4816,13 +4816,13 @@ div#sparklinehome canvas {
 	text-decoration:none;
 }
 
-#password{
+ #passconta{
     position: relative;
-}
+} 
 #togglePassword{
     position: absolute;
-    right: 50px;
-    top: 30%;
+    right: 2%;
+    top: 60%;
 }
 
 
