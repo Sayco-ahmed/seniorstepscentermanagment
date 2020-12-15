@@ -264,12 +264,7 @@
 
 @section('this_page_scripts')
     
-  <!-- jquery
-		============================================ -->
-  <script src="js/vendor/jquery-1.12.4.min.js"></script>
-  <!-- bootstrap JS
-		============================================ -->
-  <script src="js/bootstrap.min.js"></script>
+  
   <!-- wow JS
 		============================================ -->
   <script src="js/wow.min.js"></script>
