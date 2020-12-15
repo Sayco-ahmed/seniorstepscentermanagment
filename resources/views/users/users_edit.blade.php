@@ -557,12 +557,7 @@
 @endsection
 
 @section('this_page_scripts')
-    	<!-- jquery
-		============================================ -->
-	<script src="{{asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
-	<!-- bootstrap JS
-            ============================================ -->
-	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+    
 	<!-- wow JS
             ============================================ -->
 	<script src="{{asset('js/wow.min.js')}}"></script>
