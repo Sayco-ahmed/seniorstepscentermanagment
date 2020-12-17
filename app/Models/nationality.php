@@ -11,7 +11,9 @@ class nationality extends Model
     
     protected $fillable = [
         'nationalityName'
-        
     ];
- 
+     
+    public function student(){
+        return $this->hasMany(student::class , 'nationalityId' , 'id');
+    }
 }

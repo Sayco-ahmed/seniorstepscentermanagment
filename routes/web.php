@@ -34,4 +34,5 @@ Route::namespace('Pages')->group(function () {
     Route::resource('/student_status', 'StudentstatusController');
     Route::resource('/trainer', 'TrainerController');
     Route::resource('/user', 'UserController');
+    Route::resource('/student', 'StudentController');
 });

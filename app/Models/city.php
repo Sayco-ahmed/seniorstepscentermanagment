@@ -13,5 +13,10 @@ class city extends Model
         'cityName',
         'countryId',
     ];
- 
+    public function student(){
+        return $this->hasMany(student::class , 'cityId' , 'id');
+    }
 }
+
+
+

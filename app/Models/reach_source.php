@@ -13,4 +13,9 @@ class reach_source extends Model
         'reachSourceText'
         
     ];
+
+         
+    public function student(){
+        return $this->hasMany(student::class , 'reachSourceId' , 'id');
+    }
 }

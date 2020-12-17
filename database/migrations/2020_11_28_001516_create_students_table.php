@@ -14,6 +14,7 @@ class CreateStudentsTable extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
+
             $table->bigIncrements('id');
             $table->string('fullNameAr', 250)->nullable();
             $table->string('fullNameEn', 250)->nullable();
@@ -34,12 +35,8 @@ class CreateStudentsTable extends Migration
             $table->text('address')->nullable();
             $table->text('facebookAccnt')->nullable();
             $table->text('notes')->nullable();
-
-
-
-
-
             $table->timestamps();
+            
         });
     }
 

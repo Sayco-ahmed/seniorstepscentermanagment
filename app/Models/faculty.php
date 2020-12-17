@@ -13,4 +13,8 @@ class faculty extends Model
         'facultyName',
         'universityId',
     ];
+
+    public function student(){
+        return $this->hasMany(student::class , 'facultyId' , 'id');
+    }
 }

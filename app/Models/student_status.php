@@ -12,4 +12,9 @@ class student_status extends Model
     protected $fillable = [
         'statusName'
     ];
+
+    
+    public function student(){
+        return $this->hasMany(student::class , 'studentStatusId' , 'id');
+    }
 }
