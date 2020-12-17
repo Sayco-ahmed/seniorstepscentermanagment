@@ -355,7 +355,7 @@
                                      </div>
                                 </div>
 
-                                {{-- <div class="form-group data-custon-pick" style="text-align:left">
+                                <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">
                                         <label class="">Country Name</label>
 
@@ -366,14 +366,14 @@
                                             <option value="">Country Name</option>
 
                                             @foreach ($allCountry as $Country)
-                                                <option value="{{$Country->id}}" {{old('countryId') == $Country->id ? 'select' : ''}} >{{$Country->cityName}}</option>
+                                                <option value="{{$Country->id}}" {{old('countryId') == $Country->id ? 'select' : ''}} >{{$Country->name}}</option>
                                             @endforeach
                                             
                                           
                                         </select>
                                     
                                      </div>
-                                </div> --}}
+                                </div> 
 
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">

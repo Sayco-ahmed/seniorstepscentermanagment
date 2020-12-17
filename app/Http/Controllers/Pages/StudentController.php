@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pages;
 
+use App\Country;
 use App\Http\Controllers\Controller;
 use App\Models\city;
 use App\Models\faculty;
@@ -31,6 +32,7 @@ class StudentController extends Controller
      */
     public function create()
     {
+        
         $allcities = city::all();
         $allfaculty = faculty::all();
         $allnationality = nationality::all();
