@@ -161,6 +161,7 @@
                 <a href="{{route('student_status.index')}}">student status</a>
                 <a href="{{route('trainer.index')}}">Trainer</a>
                 <a href="{{route('user.index')}}">Users</a>
+                <a href="{{route('student.index')}}">Students</a>
                     
                 </div>
             </div>

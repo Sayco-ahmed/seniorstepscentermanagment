@@ -331,10 +331,10 @@
 											</ul>
 										</li>
 										<li>
-											<a data-toggle="collapse" data-target="#democrou" href="#">Profile<span
+											<a data-toggle="collapse" data-target="#democrou" href="#">Students<span
 													class="admin-project-icon edu-icon edu-down-arrow"></span></a>
 											<ul id="democrou" class="collapse dropdown-header-top">
-												<li><a href="User_profile.html" class="dropdown-item">User Profile</a></li>
+											<li><a href="{{route('student.index')}}" class="dropdown-item">student</a></li>
 
 
 											</ul>
@@ -360,7 +360,7 @@
 											<a data-toggle="collapse" data-target="#Charts" href="#">Users <span
 													class="admin-project-icon edu-icon edu-down-arrow"></span></a>
 											<ul class="collapse dropdown-header-top">
-												<li><a href="Users.html" class="dropdown-item">Users </a></li>
+											<li><a href="{{route('user.index')}}" class="dropdown-item">Users </a></li>
 											</ul>
 										</li>
 									</ul>
