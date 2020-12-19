@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use App\Http\Controllers\Controller;
 use App\Models\faculty;
+use App\University;
 use Illuminate\Http\Request;
 
 class FacultyController extends Controller
@@ -16,8 +17,8 @@ class FacultyController extends Controller
     public function index()
     {
         $faculty = faculty::all();
-
-        return view('faculty.faculty' , compact('faculty'));
+        $universities = University::all();
+        return view('faculty.faculty' , compact('faculty' , 'universities'));
     }
 
     /**

@@ -176,18 +176,17 @@
                                                 <label for="city-name" class="control-label">City name:</label>
                                             <input type="text" class="form-control" id="city-name" name="cityName" value="{{old('cityName')}}">
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="country-name" class="control-label">Country Name:</label>
                                                 <div class="input-mark-inner mg-b-22">
                                                         <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
 
                                                             <option value=""    {{ old('countryId') == '' ? 'selected' : ''}}>Select</option>
-                                                            <option value="112" {{ old('countryId') == '' ? 'selected' : ''}}>United States</option>
-                                                            <option value="113" {{ old('countryId') == '' ? 'selected' : ''}}>United Kingdom</option>
-                                                            <option value="114" {{ old('countryId') == '' ? 'selected' : ''}}>Afghanistan</option>
-                                                            <option value="115" {{ old('countryId') == '' ? 'selected' : ''}}>Aland Islands</option>
-                                                            <option value="116" {{ old('countryId') == '' ? 'selected' : ''}}>Albania</option>
-                                                            <option value="117" {{ old('countryId') == '' ? 'selected' : ''}}>Algeria</option>
+                                                            @foreach ($allCountry as $Country)
+                                                            <option value="{{$Country->id}}" {{old('countryId') == $Country->id ? 'select' : ''}} >{{$Country->name}}</option>
+                                                            @endforeach
+                                                        
                                                             
                                                         </select>
                                                 </div>
@@ -236,7 +235,7 @@
                                         
                                         <td>{{ $city->id }}</td>
                                         <td>{{ $city->cityName }}</td>
-                                        <td>{{ $city->countryId }}</td>
+                                        <td>{{ $city->country->name }}</td>
                                         <td>
                                             <div class="product-buttons">
                                                 <button  data-toggle="modal" data-target="#edtcity{{ $city->id }}" data-whatever="@mdo"
@@ -278,18 +277,15 @@
                                                         <label for="country-name" class="control-label">Country Name:</label>
                                                         <div class="input-mark-inner mg-b-22">
                                                             <select data-placeholder="Choose a Country..." class="chosen-select" name="countryId">
-                                                                <option value="" >Select</option>
-                                                                <option value="112" @if($city->countryId == "112") selected @endif>United States</option>
-                                                                <option value="113" @if($city->countryId == "113") selected @endif>United Kingdom</option>
-                                                                <option value="114" @if($city->countryId == "114") selected @endif>Afghanistan</option>
-                                                                <option value="115" @if($city->countryId == "115") selected @endif>Aland Islands</option>
-                                                                <option value="116" @if($city->countryId == "116") selected @endif>Albania</option>
-                                                                <option value="117" @if($city->countryId == "117") selected @endif>Algeria</option>                                                    --}}
+                                                                
+                                                                @foreach ($allCountry as $Country)
+                                                                <option value="{{$Country->id}}" @if($Country->id == $city->country->id ) selected @endif >{{$Country->name}}</option>
+                                                                @endforeach
+                                                                                                           
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    
-                                                
+
                                                 
                                                 </div>
                                                 <div class="modal-footer">
@@ -375,7 +371,7 @@
 </div>
 @endsection
 
-@section('this_page_scripts')
+@section('this_page_scripts') 
 
         <!-- meanmenu JS
             ============================================ -->

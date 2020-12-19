@@ -187,7 +187,7 @@
                                      </div>
                                 </div>
 
-                                {{-- <div class="form-group data-custon-pick" style="text-align:left">
+                                <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">
                                         <label class="">Country Name</label>
 
@@ -195,17 +195,17 @@
                                      
                                         <select  name="countryId" class="select2" >
 
-                                            <option value="">Country Name</option>
+                                          
 
                                             @foreach ($allCountry as $Country)
-                                                <option value="{{$Country->id}}" {{$Country->id == $requested_student->countryId ? 'select' : ''}} >{{$Country->cityName}}</option>
+                                            <option value="{{$Country->id}}"   @if($Country->id == $requested_student->country->id ) selected @endif >{{$Country->name}}</option>
                                             @endforeach
                                             
-                                          
+
                                         </select>
                                     
                                      </div>
-                                </div> --}}
+                                </div>
 
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">
@@ -227,7 +227,7 @@
                                      </div>
                                 </div>
 
-                                {{-- <div class="form-group data-custon-pick" style="text-align:left">
+                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">
                                         <label class="">unversity Name</label>
 
@@ -237,15 +237,15 @@
 
                                             <option value="">unversity Name</option>
 
-                                            @foreach ($allunversity as $unversity)
-                                                <option value="{{$unversity->id}}" {{$unversity->id == $requested_student->unversityId ? 'select' : ''}} >{{$unversity->unversityName}}</option>
+                                            @foreach ($universities as $unversity)
+                                                <option value="{{$unversity->id}}" {{$unversity->id == $requested_student->unversityId ? 'select' : ''}} >{{$unversity->name}}</option>
                                             @endforeach
                                             
                                           
                                         </select>
                                     
                                      </div>
-                                </div> --}}
+                                </div> 
 
 
                                 <div class="form-group data-custon-pick" style="text-align:left">

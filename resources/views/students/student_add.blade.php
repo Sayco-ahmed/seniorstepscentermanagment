@@ -395,7 +395,7 @@
                                      </div>
                                 </div>
 
-                                {{-- <div class="form-group data-custon-pick" style="text-align:left">
+                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <div class="input-mark-inner mg-b-22">
                                         <label class="">unversity Name</label>
 
@@ -405,15 +405,15 @@
 
                                             <option value="">unversity Name</option>
 
-                                            @foreach ($allunversity as $unversity)
-                                                <option value="{{$unversity->id}}" {{old('unversityId') == $unversity->id ? 'select' : ''}} >{{$unversity->unversityName}}</option>
+                                            @foreach ($universities as $unversity)
+                                                <option value="{{$unversity->id}}" {{old('unversityId') == $unversity->id ? 'select' : ''}} >{{$unversity->name}}</option>
                                             @endforeach
                                             
                                           
                                         </select>
                                     
                                      </div>
-                                </div> --}}
+                                </div>
 
 
                                 <div class="form-group data-custon-pick" style="text-align:left">

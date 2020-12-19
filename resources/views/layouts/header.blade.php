@@ -348,7 +348,7 @@
 												<li><a href="{{route('lab.index')}}" class="dropdown-item">Labs</a></li>
 												<li><a href="{{route('nationality.index')}}" class="dropdown-item">Nationalities</a></li>
 												<li><a href="{{route('reach_source.index')}}" class="dropdown-item">Reach Source</a></li>
-											<li><a href="{{route('faculty.index')}}" class="dropdown-item">Faculty</a></li>
+												<li><a href="{{route('faculty.index')}}" class="dropdown-item">Faculty</a></li>
 												<li><a href="{{route('student_status.index')}}" class="dropdown-item">Student status</a></li>
 
 

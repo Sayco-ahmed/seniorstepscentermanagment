@@ -10,6 +10,7 @@ use App\Models\nationality;
 use App\Models\reach_source;
 use App\Models\student;
 use App\Models\student_status;
+use App\University;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -32,13 +33,14 @@ class StudentController extends Controller
      */
     public function create()
     {
-        
+        $universities = University::all();
+        $allCountry = Country::all();
         $allcities = city::all();
         $allfaculty = faculty::all();
         $allnationality = nationality::all();
         $allstudentstatus = student_status::all();
         $allreachsource = reach_source::all();
-        return view('students.student_add' , compact('allcities' , 'allfaculty' , 'allnationality' , 'allstudentstatus' , 'allreachsource'));
+        return view('students.student_add' , compact('allcities' , 'allfaculty' , 'allnationality' , 'allstudentstatus' , 'allreachsource' , 'allCountry' , 'universities'));
     }
 
     /**
@@ -52,25 +54,25 @@ class StudentController extends Controller
         $request->validate
         (
             [
-                // 'fullNameAr'   => 'required',
-                // 'fullNameEn'   => 'required',
-                // 'mobile'   => 'required',
-                // 'whatsapp'   => 'required',
-                // 'education'    => 'required',
-                // 'cityId'     => 'required',
-                // 'countryId'     => 'required',
-                // 'facultyId'     => 'required',
-                // 'studentStatusId'     => 'required',
-                // 'unversityId'     => 'required',
-                // 'nationalityId'     => 'required',
-                // 'reachSourceId'     => 'required',
-                // 'email'     => 'required',
-                // 'job'     => 'required',
-                // 'company'     => 'required',
-                // 'address'     => 'required',
-                // 'birthdate'     => 'required',
-                // 'facebookAccnt'     => 'required',
-                // 'notes'     => 'required',
+                'fullNameAr'   => 'required',
+                'fullNameEn'   => 'required',
+                'mobile'   => 'required',
+                'whatsapp'   => 'required',
+                'education'    => 'required',
+                'cityId'     => 'required',
+                'countryId'     => 'required',
+                'facultyId'     => 'required',
+                'studentStatusId'     => 'required',
+                'unversityId'     => 'required',
+                'nationalityId'     => 'required',
+                'reachSourceId'     => 'required',
+                'email'     => 'required',
+                'job'     => 'required',
+                'company'     => 'required',
+                'address'     => 'required',
+                'birthdate'     => 'required',
+                'facebookAccnt'     => 'required',
+                'notes'     => 'required',
                
             ]
         );
@@ -102,13 +104,15 @@ class StudentController extends Controller
      */
     public function edit(student $student)
     {
+        $universities = University::all();
+        $allCountry = Country::all();
         $allcities = city::all();
         $allfaculty = faculty::all();
         $allnationality = nationality::all();
         $allstudentstatus = student_status::all();
         $allreachsource = reach_source::all();
         $requested_student = $student ;
-        return view('students.student_edit' , compact('requested_student' , 'allcities' , 'allfaculty' , 'allnationality' , 'allstudentstatus' , 'allreachsource'));
+        return view('students.student_edit' , compact('requested_student' , 'universities' , 'allcities' , 'allfaculty' , 'allnationality' , 'allstudentstatus' , 'allreachsource' , 'allCountry'));
     }
 
     /**
@@ -123,25 +127,25 @@ class StudentController extends Controller
         $request->validate
         (
             [
-                // 'fullNameAr'   => 'required',
-                // 'fullNameEn'   => 'required',
-                // 'mobile'   => 'required',
-                // 'whatsapp'   => 'required',
-                // 'education'    => 'required',
-                // 'cityId'     => 'required',
-                // 'countryId'     => 'required',
-                // 'facultyId'     => 'required',
-                // 'studentStatusId'     => 'required',
-                // 'unversityId'     => 'required',
-                // 'nationalityId'     => 'required',
-                // 'reachSourceId'     => 'required',
-                // 'email'     => 'required',
-                // 'job'     => 'required',
-                // 'company'     => 'required',
-                // 'address'     => 'required',
-                // 'birthdate'     => 'required',
-                // 'facebookAccnt'     => 'required',
-                // 'notes'     => 'required',
+                'fullNameAr'   => 'required',
+                'fullNameEn'   => 'required',
+                'mobile'   => 'required',
+                'whatsapp'   => 'required',
+                'education'    => 'required',
+                'cityId'     => 'required',
+                'countryId'     => 'required',
+                'facultyId'     => 'required',
+                'studentStatusId'     => 'required',
+                'unversityId'     => 'required',
+                'nationalityId'     => 'required',
+                'reachSourceId'     => 'required',
+                'email'     => 'required',
+                'job'     => 'required',
+                'company'     => 'required',
+                'address'     => 'required',
+                'birthdate'     => 'required',
+                'facebookAccnt'     => 'required',
+                'notes'     => 'required',
                
             ]
         );

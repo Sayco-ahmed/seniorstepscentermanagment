@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\University;
 use Illuminate\Database\Eloquent\Model;
 
 class faculty extends Model
@@ -16,5 +17,9 @@ class faculty extends Model
 
     public function student(){
         return $this->hasMany(student::class , 'facultyId' , 'id');
+    }
+
+    public function university(){
+        return $this->belongsTo(University::class , 'universityId' , 'id');
     }
 }

@@ -118,21 +118,21 @@
                                                         <p><b>City Name</b><br />{{$requested_student->city->cityName}}</p>
                                                     </div>
                                                 </div>
-                                                {{-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
                                                     <div class="address-hr ">
-                                                        <p><b>Country Name</b><br />{{$requested_student->country->countryName}}</p>
+                                                        <p><b>Country Name</b><br />{{$requested_student->country->name}}</p>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
                                                     <div class="address-hr ">
                                                         <p><b>faculty Name</b><br />{{$requested_student->faculty->facultyName}}</p>
                                                     </div>
                                                 </div>
-                                                {{-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
                                                     <div class="address-hr ">
-                                                        <p><b>unversity Name</b><br />{{$requested_student->unversityId}}</p>
+                                                        <p><b>unversity Name</b><br />{{$requested_student->university->name}}</p>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-left">
                                                     <div class="address-hr ">
                                                         <p><b>nationality Name</b><br />{{$requested_student->nationality->nationalityName}}</p>

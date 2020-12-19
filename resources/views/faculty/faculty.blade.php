@@ -186,15 +186,11 @@
 
                                                 <select data-placeholder="Choose a University..." class="chosen-select" name="universityId">
 
-                                                    <option value="">Select</option>
-                                                    <option value="111"      @if(old('universityId') == "111") selected @endif>Cairo</option>
-                                                    <option value="222"     @if(old('universityId') == "222") selected @endif>Fayoum</option>
-                                                    <option value="333"  @if(old('universityId') == "333") selected @endif>Ain Shams</option>
-                                                    <option value="444"     @if(old('universityId') == "444") selected @endif>Helwan</option>
-                                                    <option value="555" @if(old('universityId') == "555") selected @endif>Bani Swaif</option>
-                                                    <option value="666"      @if(old('universityId') == "666") selected @endif>Sueiz</option>
-                                                    <option value="777"      @if(old('universityId') == "777") selected @endif>Sinai</option>
-                                                    <option value="888"       @if(old('universityId') == "888") selected @endif>alex</option>
+                                                    <option value="" @if(old('universityId') == '') selected @endif>Select</option>
+
+                                                    @foreach ($universities as $university)
+                                                         <option value="{{$university->id}}" @if(old('universityId') == $university->id) selected @endif>{{$university->name}}</option>                                                       
+                                                    @endforeach
                                                    
                                                    
                                                 </select>
@@ -237,7 +233,7 @@
                                         
                                         <td>{{ $faclty->id }}</td>
                                         <td>{{ $faclty->facultyName }}</td>
-                                        <td>{{ $faclty->universityId }}</td>
+                                        <td>{{ $faclty->university->name }}</td>
                                        
                                         <td>
                                             <div class="product-buttons">
@@ -282,15 +278,11 @@
         
                                                         <select data-placeholder="Choose a University..." class="chosen-select" name="universityId">
 
-                                                            <option value="" >Select</option>
-                                                            <option value="111"      @if($faclty->universityId == "111") selected @endif>Cairo</option>
-                                                            <option value="222"     @if($faclty->universityId == "222") selected @endif>Fayoum</option>
-                                                            <option value="333"  @if($faclty->universityId == "333") selected @endif>Ain Shams</option>
-                                                            <option value="444"     @if($faclty->universityId == "444") selected @endif>Helwan</option>
-                                                            <option value="555" @if($faclty->universityId == "555") selected @endif>Bani Swaif</option>
-                                                            <option value="666"      @if($faclty->universityId == "666") selected @endif>Sueiz</option>    
-                                                            <option value="777"      @if($faclty->universityId == "777") selected @endif>Sinai</option> 
-                                                            <option value="888"       @if($faclty->universityId == "888") selected @endif>alex</option>  
+                                                            <option value="" @if($faclty->universityId == $university->id) selected @endif>Select</option>
+
+                                                    @foreach ($universities as $university)
+                                                         <option value="{{$university->id}}" @if($faclty->universityId == $university->id) selected @endif>{{$university->name}}</option>                                                       
+                                                    @endforeach 
                                                     
                                                         </select>
                                                     </div>

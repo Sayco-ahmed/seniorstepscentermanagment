@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pages;
 
+use App\Country;
 use App\Http\Controllers\Controller;
 use App\Models\city;
 use Illuminate\Http\Request;
@@ -17,8 +18,8 @@ class CityController extends Controller
     {
 
         $cities = city::all();
-
-        return view('city.city' , compact('cities'));
+        $allCountry = Country::all();
+        return view('city.city' , compact('cities' , 'allCountry'));
 
     }
 
