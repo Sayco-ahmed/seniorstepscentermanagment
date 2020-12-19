@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-use app\Country;
+use App\Country;
 use App\University;
 use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\UnintentionallyCoveredCodeError;
