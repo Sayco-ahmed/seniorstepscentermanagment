@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\course;
 use App\Models\lab;
 use App\Models\round;
+use App\Models\trainer;
 use Illuminate\Http\Request;
 
 class RoundController extends Controller
@@ -30,7 +31,8 @@ class RoundController extends Controller
     {
         $allcourses = course::all();
         $alllabs    = lab::all();
-        return view('rounds.round_add' , compact('allcourses' , 'alllabs'));
+        $trainers = trainer::all();
+        return view('rounds.round_add' , compact('allcourses' , 'alllabs' , 'trainers'));
     }
 
     /**
@@ -50,14 +52,22 @@ class RoundController extends Controller
                 'roundStartDate'   => 'required',
                 'roundEndDate'    => 'required',
                 'roundStatusId'     => 'required',
-                // 'roundFees'      => 'file|max:51200|mimes:doc,docx,pdf',
+                'roundFees'      => 'required',
                 'roundNotes'      => 'required',
+                'trainerId'     => 'required',
                 // 'stdRndRequestsId'    => 'required',
                
             ]
         );
 
-        round::create($request->all());
+        $currentround = round::create($request->all());
+
+        $curentid = round::find($currentround->id) ;
+
+        $trainersid = $request->trainerId ;
+     
+
+        $curentid->trainers()->attach($trainersid);
 
         session()->flash('success',('round added successfully'));
 

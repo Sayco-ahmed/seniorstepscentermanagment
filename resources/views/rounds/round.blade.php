@@ -182,8 +182,9 @@
 
                       <th>Course Image</th>
                       <th>Round Name</th>
+                      <th>Round Fees</th>
                       <th>Round Start Date</th>
-                      <th>Round Trainer</th>
+                      {{-- <th>Round Trainer</th> --}}
 
 
                       <th>Round Schedule</th>
@@ -202,8 +203,9 @@
                       <td><img src="{{$singleround->course->image_path}}" alt="" srcset="" style="border-radius: 50%;" width="40px"
                           height="40px"></td>
                       <td>{{$singleround->roundName}}</td>
+                      <td>{{$singleround->roundFees}}</td>
                       <td>{{$singleround->roundStartDate}}</td>
-                      <td>Abdallah Khalaf</td>
+                      {{-- <td>{{$singleround->trainer->trainer_en_name}}</td> --}}
                       <td>Round Schedule</td>
                       <td>{{$singleround->roundStatusId}}</td>
                       <td> <a href="{{route('round.show' ,$singleround->id)}}"><button data-toggle="tooltip" title="View"

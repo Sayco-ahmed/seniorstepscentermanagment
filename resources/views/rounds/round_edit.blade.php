@@ -234,7 +234,10 @@
                                 <label class="">Round Name</label>
                                 <input name="roundName" value="{{$requested_round->roundName}}" type="text" class="form-control" placeholder="Round Name">
                             </div>
-
+                            <div class="form-group data-custon-pick" style="text-align:left">
+                                <label class="">Round Fees</label>
+                                <input name="roundFees" value="{{$requested_round->roundFees}}" type="number" class="form-control" placeholder="Round Fees">
+                            </div>
 
                             <div class="form-group data-custon-pick" style="text-align:left">
                                 <label>Round Start Date</label>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\trainer;
 use Illuminate\Database\Eloquent\Model;
 
 class round extends Model
@@ -18,6 +18,8 @@ class round extends Model
         'roundStatusId',
         'roundFees',
         'roundNotes',
+        
+
         'stdRndRequestsId'
         
     ];
@@ -28,6 +30,10 @@ class round extends Model
 
     public function lab (){
         return $this->belongsTo(lab::class , 'labId');
-     }
+    }
+
+    public function trainers (){
+        return $this->belongsToMany(trainer::class , 'round_trainer' , 'roundId' , 'trainerId');
+    }
 
 }

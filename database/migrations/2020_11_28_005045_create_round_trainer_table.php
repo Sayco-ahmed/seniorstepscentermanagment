@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoundsTrainersTable extends Migration
+class CreateRoundTrainerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateRoundsTrainersTable extends Migration
      */
     public function up()
     {
-        Schema::create('rounds_trainers', function (Blueprint $table) {
+        Schema::create('round_trainer', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->BigInteger('trainerId')->unsigned()->nullable();
+            $table->foreign('trainerId')->references('id')->on('trainers');
             $table->BigInteger('roundId')->unsigned()->nullable();
+            $table->foreign('roundId')->references('id')->on('rounds');
 
             $table->timestamps();
         });
@@ -29,6 +31,6 @@ class CreateRoundsTrainersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rounds_trainers');
+        Schema::dropIfExists('round_trainer');
     }
 }

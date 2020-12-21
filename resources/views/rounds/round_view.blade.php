@@ -103,6 +103,11 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                     <div class="address-hr ">
+                                                        <p><b>Round Fees</b><br /> {{$requested_round->roundFees}} </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                    <div class="address-hr ">
                                                         <p><b>Round Start Date</b><br /> {{$requested_round->roundStartDate}} </p>
                                                     </div>
                                                 </div>
@@ -119,15 +124,16 @@
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
                                                     <div class="address-hr ">
                                                         <p><b>Assigned Trainers</b><br /> <ul>
+                                                            
                                                             <li>
-                                                                <p>abdallah khalaf</p>
+                                                                @foreach ($requested_round->trainers as $trainer)
+                                                            <p>{{$trainer->trainer_en_name}}</p>
+                                                                    
+                                                                @endforeach
                                                             </li>
-                                                            <li>
-                                                                <p>abdallah khalaf</p>
-                                                            </li>
-                                                            <li>
-                                                                <p>abdallah khalaf</p>
-                                                            </li>
+                                                            
+                                                           
+
                                                         </ul> </p>
                                                     </div>
                                                 </div>

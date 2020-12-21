@@ -363,8 +363,13 @@
                                     <label class="">Round Name</label>
                                 <input type="text" class="form-control" placeholder="Round Name" name="roundName" value="{{old('roundName')}}">
                                 </div>
+                                <div class="form-group data-custon-pick" style="text-align:left">
+                                    <label class="">Round Fees</label>
+                                <input type="number" class="form-control" placeholder="Round Fees" name="roundFees" value="{{old('roundFees')}}">
+                                </div>
                         
-                               
+                                
+
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     <label>Round Start Date</label>
                                     <div class="input-mark-inner mg-b-22">
@@ -377,7 +382,7 @@
                                         <input type="date" class="form-control" placeholder="Round end Date" name="roundEndDate" value="{{old('roundEndDate')}}">
                                     </div>
                                 </div>
-{{-- 
+
                                 <div class="form-group data-custon-pick" style="text-align:left">
                                     
                                     <div class="sparkline10-graph">
@@ -388,13 +393,12 @@
                                                         
                                                         <div class="form-group">
                                                             <label>Assigned Trainers</label>
-                                                            <select class="select2" multiple="multiple" data-placeholder="Select a trainer" style="width: 100%;">
-                                                              <option>Abdallah Khalaf</option>
-                                                              <option>Mohamed Gamal</option>
-                                                              <option>Ahmed</option>
-                                                              <option>Mohamed</option>
-                                                              <option>Mahmoud</option>
-                                                              
+                                                            <select class="select2" multiple="multiple" data-placeholder="Select a trainer" style="width: 100%;" name="trainerId[]">
+
+                                                            @foreach ($trainers as $trainer)
+                                                            <option value="{{$trainer->id}}" {{old('trainerId') == $trainer->id ? 'selected' : ''}} >{{$trainer->trainer_en_name}}</option>                                                              
+                                                            @endforeach
+                                                             
                                                             </select>
                                                           </div>
 
@@ -403,7 +407,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> --}}
+                                </div> 
 
 
                                 {{-- <div class="form-group data-custon-pick" style="text-align:left">

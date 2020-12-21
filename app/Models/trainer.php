@@ -36,9 +36,13 @@ class trainer extends Model
         protected $appends = ['image_path'] ;
     
         public function getImagePathAttribute(){
-    
-    
             return asset('uploads/trainer/' . $this->trainerImg);
         }
+
+        
+        public function rounds (){
+            return $this->belongsToMany(round::class , 'round_trainer' ,  'trainerId' , 'roundId' );
+        }
+
     
 }
